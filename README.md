@@ -7,6 +7,10 @@ This code is a PHP function that generates a CSV file from a SELECT query result
 - PHP version 7.4.0 or higher
 - PDO extension enabled
 
+## Install Package
+
+composer require vijaykumar/sql-to-csv:dev-master@dev
+
 ## Usage
 
 1. Include the code file containing the `generate_csv` function in your PHP project.
