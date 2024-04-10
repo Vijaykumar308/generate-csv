@@ -1,5 +1,7 @@
 <?php
-namespace Vijaykumar\PhpCsvGenerator;
+
+namespace Vijaykumar\SqlToCsv;
+
 
 class GenerateCsv {
     public function generate_csv($conn, $query, $filename='Report') {

@@ -1,12 +1,12 @@
 {
-    "name": "vijaykumar/php-csv-generator",
-    "description": "This package is help you to generate csv files.",
+    "name": "vijaykumar/sql-to-csv",
+    "description": "This package is helps you to generates csv files using sql queries.",
     "require": {
         "php": "^7.4"
     },
     "autoload": {
         "psr-4": {
-            "Vijaykumar\\PhpCsvGenerator\\": "src/"
+            "Vijaykumar\\SqlToCsv\\": "src/"
         }
     },
     "authors": [
