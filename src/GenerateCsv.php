@@ -2,6 +2,9 @@
 
 namespace Vijaykumar\SqlToCsv;
 
+use \PDO;
+use Exception;
+
 
 class GenerateCsv {
     public function generate_csv($conn, $query, $filename='Report') {

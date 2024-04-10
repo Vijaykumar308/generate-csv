@@ -1,9 +1,10 @@
 {
     "name": "vijaykumar/sql-to-csv",
-    "description": "This package is helps you to generates csv files using sql queries.",
+    "description": "This package help you to generates csv files using sql queries.",
     "require": {
         "php": "^7.4"
     },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Vijaykumar\\SqlToCsv\\": "src/"
