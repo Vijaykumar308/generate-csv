@@ -28,7 +28,8 @@ composer require vijaykumar/sql-to-csv:dev-master@dev
 ```php
 <?php
 
-require_once 'generate_csv.php';
+require_once "./vendor/autoload.php";
+use Vijaykumar\SqlToCsv\GenerateCsv;
 
 // Create a database connection
 $conn = new PDO("mysql:host=localhost;dbname=mydatabase", "username", "password");
