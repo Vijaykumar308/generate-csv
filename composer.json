@@ -2,7 +2,7 @@
     "name": "vijaykumar/sql-to-csv",
     "description": "This package help you to generates csv files using sql queries.",
     "require": {
-        "php": "^7.4"
+        "php": ">=7.4.0"
     },
     "license": "MIT",
     "autoload": {
