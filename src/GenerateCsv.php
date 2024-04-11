@@ -5,8 +5,8 @@ namespace Vijaykumar\SqlToCsv;
 use \PDO;
 use Exception;
 
-
 class GenerateCsv {
+
     public function generate_csv($conn, $query, $filename='Report') {
 
         // Create a file pointer
@@ -39,13 +39,13 @@ class GenerateCsv {
                     array_push($rowData, $row);
                 }
                 
-                $header = $this->get_header($rowData[0]);
+                $header = get_header($rowData[0]);
     
                 fputcsv($filePointer, $header, $delimiter);
                 
                 // Creating csv
                 for ($index = 0; $index < count($rowData); $index++) {
-                    $rowForCSV = $this->get_values($rowData[$index]);
+                    $rowForCSV = get_values($rowData[$index]);
                     fputcsv($filePointer, $rowForCSV, $delimiter);
                 }
                 
@@ -67,29 +67,6 @@ class GenerateCsv {
         }
         
     }
-
-    public function get_values($arr) {
-        $temp = array();
-        foreach ($arr as $key => $value) {
-            array_push($temp, $value);
-        }
-        return $temp;
-    }
-
-    public function modify_header($str) {
-        return ucwords(str_replace("_", " ", $str));
-    }
-    
-    public function get_header($data) {
-        $header = array();
-
-        foreach ($data as $key => $value) {
-            $headerName = $this->modify_header($key);
-            array_push($header,$headerName);
-        }
-
-        return $header;
-    } 
 }
 
 function downloadScript($filename) {
@@ -110,5 +87,28 @@ function isSelectQuery($query) {
 
     return false; // It is not a select query
 }
+
+function get_values($arr) {
+    $temp = array();
+    foreach ($arr as $key => $value) {
+        array_push($temp, $value);
+    }
+    return $temp;
+}
+
+function modify_header($str) {
+    return ucwords(str_replace("_", " ", $str));
+}
+
+function get_header($data) {
+    $header = array();
+
+    foreach ($data as $key => $value) {
+        $headerName = modify_header($key);
+        array_push($header,$headerName);
+    }
+
+    return $header;
+} 
 
 ?>

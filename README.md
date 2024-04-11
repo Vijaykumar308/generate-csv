@@ -4,7 +4,7 @@ This code is a PHP function that generates a CSV file from a SELECT query result
 
 ## Prerequisites
 
-- PHP version 7.4.0 or higher
+- PHP version 5.6.0 or higher
 - PDO extension enabled
 
 ## Install Package
